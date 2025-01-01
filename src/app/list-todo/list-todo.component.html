@@ -1,0 +1,52 @@
+<div class="todoList">
+    <div class="d-flex header-sec" >
+        <div>
+            <h5 style="color: rgb(125, 125, 243);">All ToDo list</h5>
+        </div>
+        <div>
+            <div class="createBtn">
+                <button class="btn btn-primary" (click)="onCreate()">Create</button>
+              </div>
+        </div>
+    </div>
+   
+    <div *ngIf="tasks.length == 0">
+        <div class="no-items">
+            No data Available
+        </div>
+    </div>
+    <div *ngIf="tasks.length > 0">
+                <ng-container *ngFor="let item of tasks; let i = index">
+            <div class="todoItem">
+                <div class="d-flex flexItem">
+                    <div class="titleItem">
+                        <div class="d-flex">
+                            <div>
+                                {{item?.title}}
+                            </div>
+                            <div class="editItem" (click)="onEdit(i)">
+                                Edit
+                            </div>
+                            <div class="deleteItem" (click)="deleteTask(i)">
+                                Delete
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statusItem" [ngStyle]="{'color': item && item.status === 'Pending' ? 'red' : 'green' }">
+                        {{item?.status}}
+                    </div>
+                </div>
+        
+                <div class="descriptionItem">
+                    <span>
+                        {{item?.description}}
+                    </span>
+                </div>
+            </div>
+            <hr style="margin-top: 5px;margin-bottom: 5px;">
+    
+        </ng-container>
+    </div>
+
+    
+</div>

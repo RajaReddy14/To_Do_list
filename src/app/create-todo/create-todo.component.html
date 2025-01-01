@@ -1,0 +1,47 @@
+<!-- <ng-template #content let-d="dismiss"> -->
+    <div class="container">
+        <div class="modal-header">
+            <h4 class="modal-title">{{isEdit ? 'Edit' : 'Create'}} Todo</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="onClose()"></button>
+          </div>
+          <div class="modal-body">
+            <div class="error-notification" *ngIf="errorExist">
+                Fill all fields
+            </div>
+            <div>
+                <form [formGroup]="formData">
+                    <div class="row">
+                        <div class="inputItem">
+                            <label for="">Title</label>
+                            <input formControlName="title" type="text" class="form-control" required>
+                        </div>
+                      </div>
+                
+                      <div class="row">
+                        <div class="inputItem">
+                            <label for="">Description</label>
+                            <textarea formControlName="description" required name="" id="" class="form-control"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="row" *ngIf="isEdit">
+                        <div class="inputItem">
+                            <label for="">Status</label>
+                            <select formControlName="status" name="" id="" class="form-control">
+                                <option value="Success">Success</option>
+                                <option value="Pending">Pending</option>
+                            </select>
+                        </div>
+                      </div>
+                </form>
+
+            </div>
+    
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="onCreate()">{{isEdit ? 'Edit' : 'Save'}}</button>
+          </div>
+    </div>
+<!-- </ng-template> -->
+
+

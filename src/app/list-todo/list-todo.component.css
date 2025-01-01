@@ -1,0 +1,60 @@
+.titleItem{
+    margin-right: 30px;
+    font-weight: 500;
+    /* display: flex; */
+}
+
+.statusItem {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.descriptionItem {
+    font-size: 14px;
+    color: rgb(68, 68, 68);
+}
+
+.todoItem{
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.flexItem{
+    width: 100%;
+    justify-content: space-between;
+}
+.todoList {
+    border-radius: 10px;
+    width: 700px;
+    background-color:rgb(222 222 237);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.createBtn {
+    display: flex;
+    justify-content: end;
+}
+.header-sec {
+    display: flex;
+    justify-content: space-between;
+}
+.no-items {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.deleteItem{
+    color: red;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.editItem{
+    margin-left: 10px;
+    color: #3535ff;
+    /* color: red; */
+    margin-left: 10px;
+    font-size: 14px;
+}

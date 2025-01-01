@@ -1,0 +1,7 @@
+.error-notification {
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(255, 159, 159);
+    margin-bottom: 10px;
+}
